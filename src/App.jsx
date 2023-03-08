@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import Todo from './Component/Todo'
 
 function App() {
     const initialtodo=['wait']
   const [todo, settodo] = useState(initialtodo)
   const [inputext, setInputext] = useState([])
   const [err, setErr] = useState('')
-  const [cancel, setCancel] = useState(false)
-  const [display, setDisplay] = useState(true)
+  const [cancel, setCancel] = useState(0)
+  const [display, setDisplay] = useState(0)
   const handleclick =(e)=>{
     e.preventDefault();
     if(inputext.length<1){
@@ -19,40 +20,17 @@ function App() {
   setInputext('');
   }
 }
+const newlist = [...todo ]
   return (
     <div className="body">
-     <main>
-    <h1 className='text-[2rem] w-max m-auto'>Todo List</h1>
-       <form action="">
-    <div className="inbut">
-    <input 
-    type="text" 
-    value={inputext}
-    onChange={(e)=>setInputext(e.target.value)}/>
-    <button type='submit' className='btnadd' onClick={handleclick}>Add</button>
-    </div>
-<div className={`err`}>{err}</div>
-    <div className="lists"
-    >
-      {todo.map((t,i)=>(
-    <div
-     className={`todo ${cancel? 'cancel':''}`}
-     onClick={()=>setCancel(!cancel)}
-    key={i}
-    >
-     <input type="checkbox" id="" checked={cancel} />
-      <p className={`${cancel&&'lineover'}`}>{t}</p>
-      <img src="/media/del.png" alt=""
-      onClick={()=>setDisplay(!display)} />
-    </div>
-
-      ))}
-
-    </div>
-       </form>
-     </main>
+    
+    
+     <Todo/>
     </div>
   )
 }
 
 export default App
+
+
+// https://ljy9407.medium.com/build-a-todo-list-with-react-js-2ae075bfc355#:~:text=Build%20a%20Todo%20List%20with%20React%20Js%201,a%20basic%20form.%202%202%29%20Build%20a%20component

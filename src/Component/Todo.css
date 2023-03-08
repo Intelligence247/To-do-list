@@ -1,0 +1,57 @@
+
+.todowrapper{
+    display: grid;
+    grid-template-rows: 7rem 1fr;
+    @apply bg-[#dbdbdb] w-[25rem] h-[30rem] rounded-lg overflow-hidden shadow-xl shadow-[#453947]
+  }
+
+  header{
+    @apply bg-[#453947] flex flex-col gap-0 p-2 pt-0
+  }
+  main{
+    @apply overflow-x-auto p-4 
+  }
+  .todowrapper h1{
+    @apply text-[2rem] w-max m-auto text-white
+  }
+  .inpubtn{
+    @apply flex gap-4 w-max m-auto mb-1
+  }
+  input::placeholder{
+    padding-left: 0.5rem;
+  }
+  input{
+    @apply border-2 outline-[#32c4f4] rounded-md border-[#14f7c4] 
+  }
+  .btnadd{
+    @apply bg-blue-400 bg-[#32c4f4] px-4 rounded-md text-white
+  }
+ 
+  .err{
+    @apply text-red-400 w-max m-auto
+  }
+  .todo{
+    display: grid;
+    grid-template-columns: 1fr 10.5rem;
+   
+    @apply  m-auto  mb-1 cursor-pointer gap-x-2 
+  }
+  ul>li {
+    @apply list-disc text-black pl-4
+  }
+  .txt{
+    @apply bg-[auto] text-[#453947]
+  }
+  .linet{
+    @apply decoration-double line-through text-[rgba(0,0,0,0.5)] italic
+  }
+.comdel{
+ @apply flex justify-between 
+}
+  .comdel button{
+    @apply border-[1px] border-[green-300] rounded-lg px-2 bg-[#605163] text-white hover:bg-red-500
+  }
+  .comdel button:first-of-type{
+    @apply bg-green-200 text-black hover:bg-green-600
+  }
+  /* #453947 */
