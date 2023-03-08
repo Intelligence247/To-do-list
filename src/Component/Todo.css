@@ -2,7 +2,7 @@
 .todowrapper{
     display: grid;
     grid-template-rows: 7rem 1fr;
-    @apply bg-[#dbdbdb] w-[25rem] h-[30rem] rounded-lg overflow-hidden shadow-xl shadow-[#453947]
+    @apply bg-[#dbdbdb] lg:w-[25rem] w-[22rem] lg:h-[33rem] h-[90vh] rounded-lg overflow-hidden shadow-xl shadow-[#453947]
   }
 
   header{
@@ -33,8 +33,7 @@
   .todo{
     display: grid;
     grid-template-columns: 1fr 10.5rem;
-   
-    @apply  m-auto  mb-1 cursor-pointer gap-x-2 
+    @apply  m-auto  mb-1 gap-x-2 cursor-default
   }
   ul>li {
     @apply list-disc text-black pl-4
@@ -53,4 +52,9 @@
   }
   .comdel button:first-of-type{
     @apply bg-green-200 text-black hover:bg-green-600
+  }
+  @media (max-width:640px) {
+    .todo{
+      grid-template-columns: 1fr 9.5rem;
+    }
   }

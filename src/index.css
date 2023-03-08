@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *{
-  @apply p-0 m-0 box-border
+  @apply p-0 m-0 box-border lg:text-base text-sm
 }
 .body{
   @apply w-screen h-screen grid place-items-center bg-[#e6bded]

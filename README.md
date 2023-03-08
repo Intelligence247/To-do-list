@@ -1,5 +1,5 @@
-# WebOpt
-*An implementation of WebOpt clone `React`, and `TailwindCss`*
+# To-do-list
+*An implementation of To-do-list clone `React`, and `TailwindCss`*
 
 ## Prequisite
 - Your browser version should be up to date for better experience
