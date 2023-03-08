@@ -13,7 +13,7 @@ Clone or download this repository and run with a local server of open `index.htm
 - TailwindCSS
 ## Preview here
 
-[Go Live]()
+[Go Live](https://admirable-marigold-806028.netlify.app)
 
 ![screenshot](/public/media/sketch.png)
 
