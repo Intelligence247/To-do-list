@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  @apply p-0 m-0 box-border
+}
+.body{
+  @apply w-screen min-h-screen grid place-items-center bg-black
+}
+main{
+  @apply bg-[#dbdbdb] w-[30rem] min-h-[30rem] p-4
+}
+form{
+  @apply flex flex-col gap-8
+}
+input{
+  border-color: linear-gradient(159deg,red,blue);
+  @apply border-2 outline-[#14f7c4] rounded-md border-[#32c4f4]
+}
+.btnadd{
+  @apply bg-blue-400 bg-[#14f7c4] px-4 rounded-md text-white
+}
+.inbut{
+  @apply flex gap-2 w-max m-auto
+}
+
+.lists{
+  @apply w-[20rem] min-h-[20rem] bg-white m-auto p-8
+}
+.err{
+  @apply text-red-400 w-max m-auto
+}
+.todo{
+  @apply flex m-auto justify-between mb-4
+}
+.lineover{
+  @apply line-through decoration-[#14f7c4]
+}
+.hide{
+  @apply hidden
+}
+/* #32c4f4 */
+/* #14f7c4 */
