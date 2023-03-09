@@ -15,7 +15,7 @@ Clone or download this repository and run with a local server of open `index.htm
 
 [Go Live](https://admirable-marigold-806028.netlify.app)
 
-![screenshot](/public/media/sketch2.png)
+![screenshot](/public/media/sketch3.png)
 
 ## Contact
 
