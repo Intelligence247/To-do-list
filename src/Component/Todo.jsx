@@ -4,10 +4,12 @@ const Todo = () => {
     const [task, setTask] = useState('')
     const [taskList, setTaskList] = useState([])
     const [error, setError] = useState(true)
+    const [com, setComp] = useState(true)
     const handlechange=(e)=>{
         e.preventDefault();
         setTask(e.target.value)
     }
+
     const AddTask=(e)=>{
         if(task !== ""){
             const taskdetails={
@@ -38,7 +40,7 @@ const Todo = () => {
 
         newTasklist[Index]={
             ...newTasklist[Index],
-            isComplete: true
+            isComplete: com,
         }
 
         setTaskList(newTasklist);
@@ -69,10 +71,18 @@ const Todo = () => {
     <ul>
        {taskList.map((t,i)=>(
         <li key={i} className='todo'> 
-           <li className={`${t.isComplete?'linet':'text'}`}
-           >{t.value}</li>
+        <div className="left">
+            <input type="checkbox" checked={t.isComplete} id="" />
+           <li className={`${ t.isComplete?'linet':'text'}`}
+           >{t.value}
+           </li>
+           </div>
            <div className="comdel">
-        <button onClick={(e)=>CompletTask(e, t.id)}>Completed</button>
+        <button 
+        onClick={(e)=>{
+            CompletTask(e, t.id) 
+            setComp(!com)}}
+            className={`${t.isComplete?'cancelcomplete':'complete'}`}>Completed</button>
         <button onClick={(e)=>deletTask(e, t.id)}>Delete</button>
         </div>
         </li>

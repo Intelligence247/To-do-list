@@ -26,17 +26,16 @@
   .btnadd{
     @apply bg-blue-400 bg-[#32c4f4] px-4 rounded-md text-white
   }
- 
   .err{
     @apply text-red-400 w-max m-auto
   }
   .todo{
     display: grid;
     grid-template-columns: 1fr 10.5rem;
-    @apply  m-auto  mb-1 gap-x-2 cursor-default
+    @apply  m-auto  mb-1 gap-x-2 cursor-default 
   }
   ul>li {
-    @apply list-disc text-black pl-4
+    @apply text-black 
   }
   .txt{
     @apply bg-[auto] text-[#453947]
@@ -50,9 +49,16 @@
   .comdel button{
     @apply border-[1px] border-[green-300] rounded-lg px-2 bg-[#605163] text-white hover:bg-red-500
   }
-  .comdel button:first-of-type{
+  .comdel .complete{
     @apply bg-green-200 text-black hover:bg-green-600
   }
+  .comdel button.cancelcomplete{
+    @apply decoration-double italic bg-green-600 opacity-[0.5]
+  }
+  .left{
+    @apply flex gap-4
+  }
+
   @media (max-width:640px) {
     .todo{
       grid-template-columns: 1fr 9.5rem;
