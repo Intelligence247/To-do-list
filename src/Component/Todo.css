@@ -18,10 +18,10 @@
     @apply flex gap-4 w-max m-auto mb-1
   }
   input::placeholder{
-    padding-left: 0.5rem;
+    @apply pl-2
   }
   input{
-    @apply border-2 outline-[#32c4f4] rounded-md border-[#14f7c4] 
+    @apply border-2 focus:outline-[#32c4f4] rounded-md border-[#14f7c4] focus:pl-2
   }
   .btnadd{
     @apply bg-blue-400 bg-[#32c4f4] px-4 rounded-md text-white
